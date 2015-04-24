@@ -150,6 +150,7 @@ void SensorService::onFirstRef()
                         // some sensor HALs don't provide an orientation sensor.
                         mUserSensorList.add(aSensor);
 
+
                     } else {
                         // if we are doing our own rotation-vector, also add
                         // the orientation sensor and remove the HAL provided one.
