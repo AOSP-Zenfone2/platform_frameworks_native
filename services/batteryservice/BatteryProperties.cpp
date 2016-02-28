@@ -35,7 +35,6 @@ status_t BatteryProperties::readFromParcel(Parcel* p) {
     chargerWirelessOnline = p->readInt32() == 1 ? true : false;
     maxChargingCurrent = p->readInt32();
     batteryStatus = p->readInt32();
-    batteryChargeRate = p->readInt32();
     batteryHealth = p->readInt32();
     batteryPresent = p->readInt32() == 1 ? true : false;
     batteryLevel = p->readInt32();
@@ -51,7 +50,6 @@ status_t BatteryProperties::writeToParcel(Parcel* p) const {
     p->writeInt32(chargerWirelessOnline ? 1 : 0);
     p->writeInt32(maxChargingCurrent);
     p->writeInt32(batteryStatus);
-    p->writeInt32(batteryChargeRate);
     p->writeInt32(batteryHealth);
     p->writeInt32(batteryPresent ? 1 : 0);
     p->writeInt32(batteryLevel);
